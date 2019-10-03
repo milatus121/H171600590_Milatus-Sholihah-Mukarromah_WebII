@@ -3,14 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\kategorigaleri;
+use App\KategoriGaleri;
 
-class kategorigalericontroller extends Controller
+class KategoriGaleriController extends Controller
 {
-function index(){
-	$kategorigaleri=kategorigaleri::all();
+    public function index(){
+    	
+    	$listKategoriGaleri=KategoriGaleri::all(); 
 
-    return view('kategori_galeri.index',compact ('kategorigaleri'));
+    	return view ('kategori_galeri.index',compact('listKategoriGaleri'));
+    
+    }
 
+    public function show($id) {
+
+    	
+    	$KategoriGaleri=KategoriGaleri::find($id);
+    	
+    }
+
+    public function create(){
+
+        return view ('kategori_galeri.create');
+        
+    }
+
+    public function store(Request $request){
+        $input= $request->all();
+
+        KategoriGaleri::create($input);
+        
+        return redirect(route('kategori_galeri.index'));
+    }
 }
-}
+
