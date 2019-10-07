@@ -22,10 +22,4 @@ $KategoriArtikel=KategoriArtikel::find($id);
 
 }
 
-public function create(){
-	
-
-	return view('kategori_artikel.create';
-}
-
 }

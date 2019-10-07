@@ -8,34 +8,34 @@ use App\KategoriBerita;
 
 class BeritaController extends Controller
 {
-   	public function index(){
+    public function index(){
+        
+        $listBerita=Berita::all(); 
 
-    	$listBerita=Berita::all(); 
-
-    	return view ('berita.index',compact('listBerita'));
-    	
+        return view ('berita.index',compact('listBerita'));
+        
     }
 
     public function show($id) {
 
-    	$Berita=Berita::find($id);
+        $Berita=Berita::find($id);
 
-    	return view ('berita.show', compact('Berita'));
-    	
+        return view ('berita.show', compact('Berita'));
+        
     }
 
     public function create(){
-    	$kategoriBerita=KategoriBerita::pluck('nama','id');
+        $kategoriBerita=KategoriBerita::pluck('nama','id');
 
         return view ('berita.create', compact('kategoriBerita'));
         
     }
 
     public function store(Request $request){
-    	$input=$request->all();
+        $input=$request->all();
 
-    	Berita::create($input);
+        Berita::create($input);
 
-    	return redirect(route('berita.index'));
+        return redirect(route('berita.index'));
     }
 }

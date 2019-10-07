@@ -25,7 +25,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/kategori_artikel', 'KategoriArtikelController@index')->name('kategori_artikel.index');
 Route::get('/kategori_artikel/create','KategoriArtikelController@create')->name('kategori_artikel.create');
 Route::post('/kategori_artikel','KategoriArtikelController@store')->name('kategori_artikel.store');
-Route::get('/kategori_artikel/{id}', 'KategoriArtikelController@show')->name('kategori_artikel.show');
+Route::get('/kategori_artikel/{id}','KategoriArtikelController@show')->name('kategori_artikel.show');
+Route::get('/kategori_artikel/{id}/edit', 'KategoriArtikelController@edit')->name('kategori_artikel.edit');
+Route::patch('/kategori_artikel/{id}', 'KategoriArtikelController@update')->name('kategori_artikel.update');
 
 Route::get('/kategori_berita', 'KategoriBeritaController@index')->name('kategori_berita.index');
 Route::get('/kategori_berita/create','KategoriBeritaController@create')->name('kategori_berita.create');

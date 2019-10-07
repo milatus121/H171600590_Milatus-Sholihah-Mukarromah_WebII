@@ -14,7 +14,7 @@
                         <th scope="col">Id</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Keterangan</th>
-                        <th scope="col">User_id</th>
+                        <th scope="col">path</th>
                         <th scope="col">Create</th>
                         <th scope="col">Kategori Id</th>
                         <th scope="col">Aksi</th>
@@ -26,7 +26,7 @@
                         <td>{!! $item->id !!}</td>
                         <td>{!! $item->nama !!}</td>
                         <td>{!! $item->keterangan !!}</td>
-                        <td>{!! $item->users_id !!}</td>
+                        <td>{!! $item->path !!}</td>
                         <td>{!! $item->created_at !!}</td>
                         <td>{!! $item->kategori_galeri_id !!}</td>
                         <td>

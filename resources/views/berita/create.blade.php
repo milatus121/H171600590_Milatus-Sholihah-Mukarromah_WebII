@@ -22,7 +22,7 @@
 
 <script>
 $(document).ready(function(){
-        CKEDITOR.replace( 'isi' );
+        CKEDITOR.replace( 'isi');
 });
 
 </script>

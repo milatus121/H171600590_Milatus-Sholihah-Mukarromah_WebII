@@ -8,7 +8,7 @@ class KategoriGaleri extends Model
 {
     protected $table ='kategori_galeri';
 
-    	protected $fillable = ['nama', 'users_id'];
+    	protected $fillable = ['nama','update_at','created_at','users_id'];
 
     	protected $casts=[ ];
 }

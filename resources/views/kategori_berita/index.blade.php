@@ -20,7 +20,7 @@
                     </thead>
                     <tbody>
 
-                        @foreach( $KategoriBerita as $item)
+                        @foreach( $listKategoriBerita as $item)
                         <tr>
                         <td>{!! $item->id !!}</td>
                         <td>{!! $item->nama !!}</td>
