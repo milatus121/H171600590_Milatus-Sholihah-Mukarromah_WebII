@@ -3,49 +3,40 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Galeri</div>
+                <div class="card-header text-center bg-info">Galeri</div>
                 
                 <div class="card-body">
-                        <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">ID</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->id !!}</label>
+                    <div class="form-group row">
+                         <label  class="col-md-2 col-form-label text-md-right">ID</label>
+                         <label  class="col-md-10 col-form-label text-md-left">{!! $galeri->id !!}</label>
                     </div>
 
                     <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">Nama</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->nama !!}</label>
+                         <label  class="col-md-2 col-form-label text-md-right">Judul</label>
+                         <label  class="col-md-10 col-form-label text-md-left">{!! $galeri->judul !!}</label>
                     </div>
 
                     <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">Keterangan</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->keterangan !!}</label>
+                         <label  class="col-md-2 col-form-label text-md-right">Isi</label>
+                         <label  class="col-md-10 col-form-label text-md-left">{!! $galeri->isi !!}</label>
                     </div>
 
                      <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">User_id</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->users_id !!}
+                         <label  class="col-md-2 col-form-label text-md-right">User Id</label>
+                         <label  class="col-md-10 col-form-label text-md-left">{!! $galeri->users_id !!}
                          </label>
                     </div>
 
                     <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">Create</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->created_at->format('d/m/Y H:i') !!}</label>
+                         <label  class="col-md-2 col-form-label text-md-right">Create</label>
+                         <label  class="col-md-10 col-form-label text-md-left">{!! $galeri->created_at->format('d/m/Y H:i:s') !!}</label>
                     </div>
 
-                    <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">Update</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->updated_at->format('d/m/Y H:i') !!}</label>
-                    </div>
                     
-                     <div class="form-group row">
-                         <label  class="col-md-4 col-form-label text-md-right">Kategori Galeri</label>
-                         <label  class="col-md-8 col-form-label text-md-left">{!! $Galeri->kategori_galeri_id !!}</label>
-                    </div>
-
                     <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-4">
+                        <div class="col-md-10 offset-md-2">
                             <a href="{!! route('galeri.index')!!}" class="btn btn-primary">
                                 Back
                             </a>
@@ -56,3 +47,4 @@
         </div>
     </div>
 </div>
+@endsection

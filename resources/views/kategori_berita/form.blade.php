@@ -17,7 +17,6 @@
 
 <input id="users_id" type="hidden" class="form-control @error('users_id') is-invalid @enderror" name="users_id" value="{{ Auth::id() }}" required autofocus>
 
-
 <div class="form-group row mb-0">
     <div class="col-md-6 offset-md-4">
             <button type="submit" class="btn btn-primary">
